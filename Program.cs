@@ -6,10 +6,51 @@ public class Program
     {
         Console.WriteLine("1 - Resultado da soma");
         ExibirResultadoSoma();
+
         Console.WriteLine("\n2 - Proximo elemento");
         ExibirResultadoSequencias();
 
-        
+        Console.WriteLine("\n 3 - Dados de Faturamento");
+        double[] faturamento = new double[365];
+
+        faturamento[0] = 7710;
+        faturamento[1] = 2985;
+        faturamento[2] = 0; 
+        faturamento[3] = 0;
+        faturamento[4] = 0; 
+        faturamento[5] = 4200;
+        faturamento[6] = 29865;
+        faturamento[7] = 97789; 
+
+        ExibirDadosDeFaturamento(faturamento);
+    }
+
+    public static void ExibirDadosDeFaturamento(double[] faturamento)
+    {
+        var resultado = CalcularFaturamento(faturamento);
+
+        Console.WriteLine($"Menor faturamento: {resultado.Menor:F2}");
+        Console.WriteLine($"Maior  faturamento: {resultado.Maior:F2}");
+        Console.WriteLine($"Dias acima da media: {resultado.DiasAcimaDaMedia}");
+    }
+
+    public static (double Menor, double Maior, int DiasAcimaDaMedia) CalcularFaturamento(double[] faturamento)
+    {
+        var diasComFaturamento = faturamento.Where(x => x > 0).ToArray();
+
+        if (diasComFaturamento.Length == 0)
+        {
+            return (0, 0, 0);
+        }
+
+        double menor = diasComFaturamento.Min();
+        double maior = diasComFaturamento.Max();
+
+        double media = diasComFaturamento.Average();
+
+        int diasAcimaDaMedia = diasComFaturamento.Count(x => x > media);
+
+        return (menor, maior, diasAcimaDaMedia);
     }
 
     static void ExibirResultadoSequencias()
