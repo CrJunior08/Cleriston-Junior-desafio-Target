@@ -11,22 +11,23 @@ public class Program
         ExibirResultadoSequencias();
 
         Console.WriteLine("\n 3 - Dados de Faturamento");
+        ExibirDadosDeFaturamento();
+
+    }
+
+
+    public static void ExibirDadosDeFaturamento()
+    {
         double[] faturamento = new double[365];
 
         faturamento[0] = 7710;
         faturamento[1] = 2985;
-        faturamento[2] = 0; 
+        faturamento[2] = 0;
         faturamento[3] = 0;
-        faturamento[4] = 0; 
+        faturamento[4] = 0;
         faturamento[5] = 4200;
         faturamento[6] = 29865;
-        faturamento[7] = 97789; 
-
-        ExibirDadosDeFaturamento(faturamento);
-    }
-
-    public static void ExibirDadosDeFaturamento(double[] faturamento)
-    {
+        faturamento[7] = 97789;
         var resultado = CalcularFaturamento(faturamento);
 
         Console.WriteLine($"Menor faturamento: {resultado.Menor:F2}");
