@@ -1,0 +1,36 @@
+Para resolver esse exercicio precisei entender como se calcula distancia e tempo
+pesquisei e encontrei esse video no youtube: https://www.youtube.com/watch?v=yktxU-qwMSY
+Com base em como calcular tempo e distancia, apliquei no meu cenario, adicionado o tempo
+a mais do carro no pedagio, e calculando a distancia final de ribeirao Preto.
+
+formula da distancia:
+
+Velocidade dos dois vezes o tempo
+
+velocidade do carro vezes o tempo + velociadade do caminhao vezes o tempo
+
+90 x o tempo + 80 x o tempo = 125
+
+170 = 125
+
+t = 125/170 = 0.735 horas = 44 minutos + 15 minutos de pedagio = 59 minutos para se encontrar
+
+
+Calcular a distancia percorrida por cada veiculo:
+velocidade vezes tempo
+
+caro = 90 x 0.735 = 66.15 km
+caminhao = 80 x 0.735 = 58.80 km
+
+Tempo com pedagios do carro
+3 pedagios e 5 minutos cada
+
+3 x 5 = 15 minutos, 15/60 horas = 0.25horas
+carro = 0.735 + 0,25 = 0,985
+
+nova distancia do carro = 90 x 0.985 = 88.65 km
+o carro esta a 88.65km de ribeirao preto
+o caminhão ja andou 58.80km ate ribeirao preto, entao: 125 - 58.80 = 66,2 km de ribeirao preto
+
+Resposta: O caminhão esta mais proximo de Ribeirao Preto.
+
